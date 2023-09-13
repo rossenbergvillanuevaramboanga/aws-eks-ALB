@@ -55,3 +55,13 @@ Create IAM policy for the AWS Load Balancer Controller that allows it to make ca
 #### 4.Ingress Class Concept
 #### 5.Review IngressClass Kubernetes Manifest
 #### 6.Create IngressClass Resource
+
+## AWS Ingress Basics
+- **Ingress Annotations**: Ingress Annotations is the Load Balancer Settings.
+- **Ingress Spec Ingress Class Name**
+Ingress Class Name to which the Ingress Service needs to be associated to.
+- **Ingress Spec**: Ingress Spec defines Routing Rules
+
+### Demo 1 - Ingress Service with Default Backend
+### Demo 2 - Ingress Service with Ingress Rules
+
