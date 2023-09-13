@@ -35,3 +35,23 @@
 
 ## Architecture
 ![alt text](https://github.com/rossenbergvillanuevaramboanga/aws-eks-ALB/blob/main/images/aws-eks-alb.jpg?raw=true)
+
+### Install LB Controller
+https://github.com/stacksimplify/aws-eks-kubernetes-masterclass/tree/master/08-NEW-ELB-Application-LoadBalancers/08-01-Load-Balancer-Controller-Install 
+#### 1. Create IAM Policy
+Create IAM policy for the AWS Load Balancer Controller that allows it to make calls to AWS APIs on your behalf.
+#### 2.Create an IAM role for the AWS LoadBalancer Controller and attach the role to the Kubernetes service account
+- Create IAM Role using eksctl
+- Verify using eksctl cli
+- Verify CloudFormation Template eksctl created & IAM Role
+- Verify k8s Service Account using kubectl
+#### 3. Install the AWS Load Balancer Controller using Helm V3
+- Install Helm
+- Install AWS Load Balancer Controller
+- Verify that the controller is installed and Webhook Service created
+- Verify AWS Load Balancer Controller Logs
+- Verify AWS Load Balancer Controller k8s Service Account - Internals
+- Verify TLS Certs for AWS Load Balancer Controller - Internals
+#### 4.Ingress Class Concept
+#### 5.Review IngressClass Kubernetes Manifest
+#### 6.Create IngressClass Resource
