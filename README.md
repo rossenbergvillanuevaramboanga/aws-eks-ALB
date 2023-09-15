@@ -74,3 +74,8 @@ Ingress Class Name to which the Ingress Service needs to be associated to.
 - As part of this process, this respective annotation alb.ingress.kubernetes.io/healthcheck-path: will be moved to respective application NodePort Service.
 - Only generic settings will be present in Ingress manifest annotations area 04-ALB-Ingress-ContextPath-Based-Routing.yml
 
+## AWS Load Balancer Ingress SSL
+1. Register AWS Route53 DNS Domain
+2. Create SSL Certificate in AWS Certificate Manager
+3. Update SSl Annotations in Ingress Service
+4. Deploy K8S Manifests and Tests
