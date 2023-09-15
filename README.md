@@ -57,6 +57,7 @@ Create IAM policy for the AWS Load Balancer Controller that allows it to make ca
 #### 6.Create IngressClass Resource
 
 ## AWS Ingress Basics
+https://github.com/stacksimplify/aws-eks-kubernetes-masterclass/tree/master/08-NEW-ELB-Application-LoadBalancers/08-02-ALB-Ingress-Basics
 - **Ingress Annotations**: Ingress Annotations is the Load Balancer Settings.
 - **Ingress Spec Ingress Class Name**
 Ingress Class Name to which the Ingress Service needs to be associated to.
@@ -66,6 +67,7 @@ Ingress Class Name to which the Ingress Service needs to be associated to.
 ### Demo 2 - Ingress Service with Ingress Rules
 
 ## AWS Load Balancer Ingress Context Path Based Routing
+https://github.com/stacksimplify/aws-eks-kubernetes-masterclass/tree/master/08-NEW-ELB-Application-LoadBalancers/08-03-ALB-Ingress-ContextPath-Based-Routing
 - Discuss about the Architecture we are going to build as part of this Section
 - We are going to deploy all these 3 apps in kubernetes with context path based routing enabled in Ingress Controller
 - /app1/* - should go to app1-nginx-nodeport-service
@@ -75,7 +77,27 @@ Ingress Class Name to which the Ingress Service needs to be associated to.
 - Only generic settings will be present in Ingress manifest annotations area 04-ALB-Ingress-ContextPath-Based-Routing.yml
 
 ## AWS Load Balancer Ingress SSL
+https://github.com/stacksimplify/aws-eks-kubernetes-masterclass/tree/master/08-NEW-ELB-Application-LoadBalancers/08-04-ALB-Ingress-SSL
+https://github.com/stacksimplify/aws-eks-kubernetes-masterclass/tree/master/08-NEW-ELB-Application-LoadBalancers/08-05-ALB-Ingress-SSL-Redirect
 1. Register AWS Route53 DNS Domain
 2. Create SSL Certificate in AWS Certificate Manager
 3. Update SSl Annotations in Ingress Service
 4. Deploy K8S Manifests and Tests
+
+## External DNS
+
+### A. DEPLOY EXTERNAL DNS
+https://github.com/stacksimplify/aws-eks-kubernetes-masterclass/tree/master/08-NEW-ELB-Application-LoadBalancers/08-06-Deploy-ExternalDNS-on-EKS
+1. Create IAM Role, k8s Service Account & Associate IAM Policy
+- Create IAM Role, k8s Service Account & Associate IAM Policy
+- Verify the Service Account
+- Verify CloudFormation Stack
+- Verify IAM Role & IAM Policy
+- Verify IAM Service Accounts using eksctl
+2. Update External DNS Kubernetes manifest
+- Line number 9: IAM Role update
+- Line 55, 56: Commented them
+- Line 65, 67: Commented them
+- Line 61: Get latest Docker Image name
+3. Deploy ExternalDNS
+
